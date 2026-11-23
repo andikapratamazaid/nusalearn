@@ -1,0 +1,24 @@
+[build-system]
+requires = ["meson-python", "meson>=1.1", "ninja", "Cython>=3.0", "numpy>=1.26"]
+build-backend = "mesonpy"
+
+[project]
+name = "nusalearn"
+version = "0.1.0"
+description = "A small machine learning library written from scratch with NumPy"
+readme = "README.md"
+requires-python = ">=3.10"
+license = { text = "MIT" }
+authors = [{ name = "Andika Pratama Zaid" }]
+keywords = ["machine-learning", "numpy", "education", "from-scratch"]
+dependencies = ["numpy>=1.26"]
+
+[project.optional-dependencies]
+test = ["pytest"]
+benchmark = ["scikit-learn", "matplotlib", "pandas"]
+
+[project.urls]
+Homepage = "https://github.com/andikapratamazaid"
+
+[tool.meson-python]
+# Nothing project specific yet; the layout follows meson-python defaults.
